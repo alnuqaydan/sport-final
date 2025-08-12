@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Dashboard - Live Scores & Statistics</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-trophy"></i>
+                <h1>SportsPro</h1>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#scores" class="nav-link active">Live Scores</a></li>
+                    <li><a href="#standings" class="nav-link">Standings</a></li>
+                    <li><a href="#players" class="nav-link">Players</a></li>
+                    <li><a href="#schedule" class="nav-link">Schedule</a></li>
+                </ul>
+            </nav>
+            <button class="theme-toggle" id="themeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Welcome to the Ultimate Sports Experience</h2>
+                <p>Stay updated with live scores, player stats, and match schedules</p>
+                <div class="hero-stats">
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="150">0</div>
+                        <div class="stat-label">Live Matches</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="45">0</div>
+                        <div class="stat-label">Leagues</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="2500">0</div>
+                        <div class="stat-label">Players</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Live Scores Section -->
+        <section id="scores" class="section">
+            <div class="section-header">
+                <h2><i class="fas fa-broadcast-tower"></i> Live Scores</h2>
+                <div class="section-controls">
+                    <button class="filter-btn active" data-sport="all">All</button>
+                    <button class="filter-btn" data-sport="football">Football</button>
+                    <button class="filter-btn" data-sport="basketball">Basketball</button>
+                    <button class="filter-btn" data-sport="soccer">Soccer</button>
+                </div>
+            </div>
+            <div class="scores-grid" id="scoresGrid">
+                <!-- Live scores will be populated by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Standings Section -->
+        <section id="standings" class="section">
+            <div class="section-header">
+                <h2><i class="fas fa-list-ol"></i> League Standings</h2>
+            </div>
+            <div class="standings-container">
+                <div class="standings-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Team</th>
+                                <th>Played</th>
+                                <th>Won</th>
+                                <th>Lost</th>
+                                <th>Points</th>
+                            </tr>
+                        </thead>
+                        <tbody id="standingsBody">
+                            <!-- Standings will be populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Players Section -->
+        <section id="players" class="section">
+            <div class="section-header">
+                <h2><i class="fas fa-users"></i> Top Players</h2>
+            </div>
+            <div class="players-grid" id="playersGrid">
+                <!-- Players will be populated by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Schedule Section -->
+        <section id="schedule" class="section">
+            <div class="section-header">
+                <h2><i class="fas fa-calendar-alt"></i> Upcoming Matches</h2>
+            </div>
+            <div class="schedule-container" id="scheduleContainer">
+                <!-- Schedule will be populated by JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SportsPro</h3>
+                <p>Your ultimate destination for sports statistics and live updates.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#scores">Live Scores</a></li>
+                    <li><a href="#standings">Standings</a></li>
+                    <li><a href="#players">Players</a></li>
+                    <li><a href="#schedule">Schedule</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 SportsPro. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
